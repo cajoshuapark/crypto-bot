@@ -44,3 +44,17 @@ The lines in the graph represent the moving averages
 ## Plotting Candlestick Graph with closing time
 The lines in the graph represent the moving averages
 The up arrows represent buy indicators, the down arrows represent sell indicators
+
+## Automate Crypto Bot
+```
+def fetchData():
+    #trading logic
+
+schedule.every(12).hours.do(fetchData)
+
+#continuous data fetching loop
+while True:
+    schedule.run_pending()
+```
+
+
