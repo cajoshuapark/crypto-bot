@@ -20,20 +20,26 @@ client = Client()
 historical = client.get_historical_klines('BTCUSDT', client.KLINE_INTERVAL_1DAY, '1-Oct-2021')
 ```
 ## Data Cleaning for Candlestick Graph
+Adding column names
 ```
-#adding column names
-   df.columns = ['Open Time', 'Open', 'High', 'Low', 'Close', 'Volume','Close Time', 'Quote Asset Volume', 'Number of Trades', 'TB Base Volume', 'TB Quote Volume', 'Ignore']
-  
-#changing elements in following columns to type 'datetime'
-   df['Open Time'] = pd.to_datetime(df['Open Time']/1000, unit='s')
-   df['Close Time'] = pd.to_datetime(df['Close Time']/1000, unit='s')
+df.columns = ['Open Time', 'Open', 'High', 'Low', 'Close', 'Volume','Close Time', 'Quote Asset Volume', 'Number of Trades', 'TB Base Volume', 'TB Quote Volume', 'Ignore']
+ ```
 
-#changing elements in following columns to type 'float'
-   floatColumns = ['Open', 'High', 'Low','Close', 'Volume','Quote Asset Volume', 'TB Base Volume', 'TB Quote Volume']
-   df[floatColumns]= df[floatColumns].astype('float64')
+Changing elements in following columns to type 'datetime'
+```
+df['Open Time'] = pd.to_datetime(df['Open Time']/1000, unit='s')
+df['Close Time'] = pd.to_datetime(df['Close Time']/1000, unit='s')
+```
 
-#setting index of DataFrame to 'Close Time'
-   df = df.set_index('Close Time')
+Changing elements in following columns to type 'float'
+```
+floatColumns = ['Open', 'High', 'Low','Close', 'Volume','Quote Asset Volume', 'TB Base Volume', 'TB Quote Volume']
+df[floatColumns]= df[floatColumns].astype('float64')
+```
+
+Setting index of DataFrame to 'Close Time'
+```
+df = df.set_index('Close Time')
 ```
 ## Plotting Candlestick Graph with Closing Time
 The lines in the graph represent the moving averages.
