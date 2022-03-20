@@ -1,5 +1,5 @@
 # Crypto-Bot
- Automated Cryptocurrency Trading Bot writtin in python
+ Automated Cryptocurrency Trading Bot writtin in python. Has customizable Candlestick and Buy & Sell Graphs
 
 ## Logging into NDAX Exchange
 Using ccxt library to access NDAX exchange using API Key.
