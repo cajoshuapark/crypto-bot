@@ -63,8 +63,9 @@ df = df[['Close', 'mav10', 'mav15']]
 ```
 
 ## Buy and Sell Algorithm
-Using moving average algorithm to decide buy and sell.
-Boolean varaible to make sure you buy and sell in the right order. If true, then you can buy, if false, you can sell
+Integrated an algorithm that uses moving averages to decide when buy and sell.
+
+Boolean variable to make sure you buy and sell in the right order. If true, you can buy, if false, you can sell
 ```
 tradeBoolean = True
 ```
