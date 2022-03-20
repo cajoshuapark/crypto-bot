@@ -75,7 +75,7 @@ if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)
 ## Plotting Buy and Sell Graph with Moving Averages
 The lines in the graph represent the moving averages.
 The up arrows represent buy indicators, the down arrows represent sell indicators.
-![buyAndSell](https://user-images.githubusercontent.com/41726552/159150755-be54ec2e-d961-482f-9851-0743e3a8ea11.png)
+![buyAndSell](https://user-images.githubusercontent.com/41726552/159150948-b5ca0ec8-7d75-4a8a-852c-9990385365be.png)
 
 ## Automate Crypto Bot
 Using schedule and time libraries to automate cryto bot
