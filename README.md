@@ -5,7 +5,7 @@
 ```
 import ccxt
 
-ndax = ccxt.ndax({
+exchange = ccxt.ndax({
    'apiKey': API_KEY,
    'secret': API_SECRET,
    'uid': "123456",   
@@ -42,13 +42,14 @@ df = df.set_index('Close Time')
 ```
 #if true, then you can buy, if false, you can sell
 tradeBoolean = True
+exchangeCryptoName = 'MANA/CAD'
 
 if df.mav10.iloc[len(df)-1] > df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] < df.mav15.iloc[len(df)-2] and tradeBoolean == True:
     #buy on exchange
-    ndax.id, ndax.create_market_buy_order(ndaxCryptoName, purchaseAmount)
+    exchange.id, exchange.create_market_buy_order(exchangeCryptoName, purchaseAmount)
 if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] > df.mav15.iloc[len(df)-2] and tradeBoolean == False:
     #sell on exchange
-    ndax.id, ndax.create_market_sell_order(ndaxCryptoName, availableCrypto)
+    exchange.id, exchange.create_market_sell_order(exchangeCryptoName, availableCrypto)
 
 ```
 
