@@ -2,6 +2,7 @@
  Automated Cryptocurrency Trading Bot writtin in python using public libraries such as binance, ccxt, pandas, numpy, mplfinance, matplotlib
 
 ## Logging into NDAX exchange
+Using ccxt library to access NDAX exchange
 ```
 import ccxt
 
@@ -15,6 +16,7 @@ exchange = ccxt.ndax({
 })
 ```
 ## Fetching Historical OHLC (Open High Low Close) Data
+Using python-binance library fetch historical OHLC data
 ```
 from binance.client import Client
 
