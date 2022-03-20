@@ -2,7 +2,7 @@
  Automated Cryptocurrency Trading Bot writtin in python using public libraries such as binance, ccxt, pandas, numpy, mplfinance, matplotlib
 
 ## Logging into NDAX exchange
-Using ccxt library to access NDAX exchange
+Using ccxt library to access NDAX exchange.
 ```
 import ccxt
 
@@ -16,7 +16,7 @@ exchange = ccxt.ndax({
 })
 ```
 ## Fetching Historical OHLC (Open High Low Close) Data
-Using python-binance library fetch historical OHLC data
+Using python-binance library fetch historical OHLC data.
 ```
 from binance.client import Client
 
@@ -41,7 +41,7 @@ df[floatColumns]= df[floatColumns].astype('float64')
 df = df.set_index('Close Time')
 ```
 ## Plotting Candlestick Graph with closing time
-The lines in the graph represent the moving averages
+The lines in the graph represent the moving averages.
 
 ## Calculating Moving Averages Using DataFrame
 To read more about moving averages, visit (https://www.investopedia.com/terms/m/movingaverage.asp)
@@ -56,7 +56,7 @@ df = df[['Close', 'mav10', 'mav15']]
 ```
 
 ## Buy and Sell Algorithm
-Using moving average algorithm to decide buy and sell
+Using moving average algorithm to decide buy and sell.
 ```
 #if true, then you can buy, if false, you can sell
 tradeBoolean = True
@@ -72,8 +72,8 @@ if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)
 ```
 
 ## Plotting Candlestick Graph with closing time
-The lines in the graph represent the moving averages\n
-The up arrows represent buy indicators, the down arrows represent sell indicators
+The lines in the graph represent the moving averages.
+The up arrows represent buy indicators, the down arrows represent sell indicators.
 
 ## Automate Crypto Bot
 Using schedule and time libraries to automate cryto bot
