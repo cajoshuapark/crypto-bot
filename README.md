@@ -43,6 +43,7 @@ df = df.set_index('Close Time')
 ```
 ## Plotting Candlestick Graph with Closing Time
 The lines in the graph represent the moving averages.
+
 ![candlestick](https://user-images.githubusercontent.com/41726552/159150975-c86b4c74-0428-4832-b797-7538cb592210.png)
 
 ## Calculating Moving Averages Using DataFrame
@@ -86,6 +87,7 @@ if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)
 ## Plotting Buy and Sell Graph with Moving Averages
 The lines in the graph represent the moving averages.
 The up arrows represent buy indicators, the down arrows represent sell indicators.
+
 ![buyAndSell](https://user-images.githubusercontent.com/41726552/159150970-f81e5fad-28ba-4c11-abf2-2901a803e8de.png)
 
 ## Automate Crypto Bot
