@@ -6,12 +6,12 @@
 import ccxt
 
 ndax = ccxt.ndax({
- 'apiKey': API_KEY,
- 'secret': API_SECRET,
- 'uid': "123456",   
- 'login' : LOGIN,
- 'password' : PASSWORD,
- 'twofa': "123456",
+   'apiKey': API_KEY,
+   'secret': API_SECRET,
+   'uid': "123456",   
+   'login' : LOGIN,
+   'password' : PASSWORD,
+   'twofa': "123456",
 })
 ```
 ## Fetching Historical OHLC (Open High Low Close) Data
@@ -41,12 +41,10 @@ df = df.set_index('Close Time')
 ## Buy and Sell Algorithm
 ```
 for i in range(len(df)):
- if df.mav10.iloc[i] > df.mav15.iloc[i] \
- and df.mav10.iloc[i-1] < df.mav15.iloc[i-1]:
-  buy.append(i)
- elif df.mav10.iloc[i] < df.mav15.iloc[i] \
- and df.mav10.iloc[i-1] > df.mav15.iloc[i-1]:
-  sell.append(i)
+   if df.mav10.iloc[i] > df.mav15.iloc[i] and df.mav10.iloc[i-1] < df.mav15.iloc[i-1]:
+      buy.append(i)
+   elif df.mav10.iloc[i] < df.mav15.iloc[i] and df.mav10.iloc[i-1] > df.mav15.iloc[i-1]:
+      sell.append(i)
 ```
 
 ## Plotting Candlestick Graph with closing time
@@ -62,13 +60,13 @@ import schedule
 import time
 
 def fetchData():
- #trading logic
+   #trading logic
 
 schedule.every(12).hours.do(fetchData)
 
 #continuous data fetching loop
 while True:
- schedule.run_pending()
+   schedule.run_pending()
 ```
 
 
