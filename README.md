@@ -106,7 +106,7 @@ while True:
    schedule.run_pending()
 ```
 ## References
-- ccxt: (https://pypi.org/project/ccxt/)
+- CCXT: (https://pypi.org/project/ccxt/)
 - schedule: (https://pypi.org/project/schedule/)
 - pandas: (https://pypi.org/project/pandas/)
 - python-binance(https://pypi.org/project/python-binance/)
