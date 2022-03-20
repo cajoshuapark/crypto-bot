@@ -59,12 +59,16 @@ To read more about moving averages, visit (https://www.investopedia.com/terms/m/
 
 ## Buy and Sell Algorithm
 Using moving average algorithm to decide buy and sell.
+Boolean varaible to make sure you buy and sell in the right order. If true, then you can buy, if false, you can sell
 ```
-#if true, then you can buy, if false, you can sell
 tradeBoolean = True
-#calculate purchase amount by dividing your current balance with the current crypto price
+```
+Calculating purchase amount by dividing your current balance with the current crypto price
+```
 purchaseAmount = '{0:.3g}'.format(availableCad / askPrice)
-
+```
+Buy and sell depending on below logic
+```
 if df.mav10.iloc[len(df)-1] > df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] < df.mav15.iloc[len(df)-2] and tradeBoolean == True:
     #buy on exchange
     exchange.id, exchange.create_market_buy_order(exchangeCryptoName, purchaseAmount)
