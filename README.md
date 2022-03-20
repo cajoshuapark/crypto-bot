@@ -40,3 +40,7 @@ df = df.set_index('Close Time')
 ```
 ## Plotting Candlestick Graph with closing time
 The lines in the graph represent the moving averages
+
+## Plotting Candlestick Graph with closing time
+The lines in the graph represent the moving averages
+The up arrows represent buy indicators, the down arrows represent sell indicators
