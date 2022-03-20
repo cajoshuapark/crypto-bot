@@ -22,8 +22,7 @@ historical = client.get_historical_klines('BTCUSDT', client.KLINE_INTERVAL_1DAY,
 ## Data Cleaning for Candlestick Graph
 ```
 #adding column names
-   df.columns = ['Open Time', 'Open', 'High', 'Low', 'Close', 'Volume','Close Time', 'Quote Asset Volume',
-     'Number of Trades', 'TB Base Volume', 'TB Quote Volume', 'Ignore']
+   df.columns = ['Open Time', 'Open', 'High', 'Low', 'Close', 'Volume','Close Time', 'Quote Asset Volume', 'Number of Trades', 'TB Base Volume', 'TB Quote Volume', 'Ignore']
   
 #changing elements in following columns to type 'datetime'
    df['Open Time'] = pd.to_datetime(df['Open Time']/1000, unit='s')
