@@ -46,15 +46,20 @@ The lines in the graph represent the moving averages.
 ![candlestick](https://user-images.githubusercontent.com/41726552/159150975-c86b4c74-0428-4832-b797-7538cb592210.png)
 
 ## Calculating Moving Averages Using DataFrame
-To read more about moving averages, visit (https://www.investopedia.com/terms/m/movingaverage.asp)
+To read more about moving averages, visit (https://www.investopedia.com/terms/m/movingaverage.asp).
+
+Calculating the moving average for 10 and 15 days
 ```
-#calculate the moving average for 10 and 15 days
-   df['mav10'] = df['Close'].rolling(10).mean()
-   df['mav15'] = df['Close'].rolling(15).mean()
-#remove any NaN values from the table
-   df = df.dropna()
-   #create a new DataFrame with index 'Close Time' and columns 'Close', 'mav10', 'mav15'
-   df = df[['Close', 'mav10', 'mav15']]
+df['mav10'] = df['Close'].rolling(10).mean()
+df['mav15'] = df['Close'].rolling(15).mean()
+```
+Removing any NaN values from the table
+```
+df = df.dropna()
+```
+Creating a new DataFrame with index 'Close Time' and columns 'Close', 'mav10', 'mav15'
+```
+df = df[['Close', 'mav10', 'mav15']]
 ```
 
 ## Buy and Sell Algorithm
@@ -70,10 +75,10 @@ purchaseAmount = '{0:.3g}'.format(availableCad / askPrice)
 Buy and sell depending on below logic
 ```
 if df.mav10.iloc[len(df)-1] > df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] < df.mav15.iloc[len(df)-2] and tradeBoolean == True:
-    #buy on exchange
+    #buy
     exchange.id, exchange.create_market_buy_order(exchangeCryptoName, purchaseAmount)
 if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] > df.mav15.iloc[len(df)-2] and tradeBoolean == False:
-    #sell on exchange
+    #sell
     exchange.id, exchange.create_market_sell_order(exchangeCryptoName, availableCrypto)
 ```
 
