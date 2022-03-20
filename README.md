@@ -42,7 +42,7 @@ df = df.set_index('Close Time')
 ```
 ## Plotting Candlestick Graph with closing time
 The lines in the graph represent the moving averages.
-![candlestick](https://user-images.githubusercontent.com/41726552/159150851-412cd2ab-c35f-480b-9c46-1c2356d9c3b0.png)
+![candlestick](https://user-images.githubusercontent.com/41726552/159150975-c86b4c74-0428-4832-b797-7538cb592210.png)
 
 ## Calculating Moving Averages Using DataFrame
 To read more about moving averages, visit (https://www.investopedia.com/terms/m/movingaverage.asp)
@@ -75,7 +75,7 @@ if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)
 ## Plotting Buy and Sell Graph with Moving Averages
 The lines in the graph represent the moving averages.
 The up arrows represent buy indicators, the down arrows represent sell indicators.
-![buyAndSell](https://user-images.githubusercontent.com/41726552/159150948-b5ca0ec8-7d75-4a8a-852c-9990385365be.png)
+![buyAndSell](https://user-images.githubusercontent.com/41726552/159150970-f81e5fad-28ba-4c11-abf2-2901a803e8de.png)
 
 ## Automate Crypto Bot
 Using schedule and time libraries to automate cryto bot
