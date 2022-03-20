@@ -78,10 +78,9 @@ The up arrows represent buy indicators, the down arrows represent sell indicator
 ![buyAndSell](https://user-images.githubusercontent.com/41726552/159150970-f81e5fad-28ba-4c11-abf2-2901a803e8de.png)
 
 ## Automate Crypto Bot
-Using schedule and time libraries to automate cryto bot
+Using schedule library to automate cryto bot
 ```
 import schedule
-import time
 
 def fetchData():
    #trading logic
