@@ -40,11 +40,16 @@ df = df.set_index('Close Time')
 ```
 ## Buy and Sell Algorithm
 ```
-for i in range(len(df)):
-   if df.mav10.iloc[i] > df.mav15.iloc[i] and df.mav10.iloc[i-1] < df.mav15.iloc[i-1]:
-      ndax.id, ndax.create_market_buy_order(ndaxCryptoName, purchaseAmount)
-   elif df.mav10.iloc[i] < df.mav15.iloc[i] and df.mav10.iloc[i-1] > df.mav15.iloc[i-1]:
-      ndax.id, ndax.create_market_sell_order(ndaxCryptoName, availableCrypto)
+#if true, then you can buy, if false, you can sell
+tradeBoolean = True
+
+if df.mav10.iloc[len(df)-1] > df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] < df.mav15.iloc[len(df)-2] and tradeBoolean == True:
+    #buy on exchange
+    ndax.id, ndax.create_market_buy_order(ndaxCryptoName, purchaseAmount)
+if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] > df.mav15.iloc[len(df)-2] and tradeBoolean == False:
+    #sell on exchange
+    ndax.id, ndax.create_market_sell_order(ndaxCryptoName, availableCrypto)
+
 ```
 
 ## Plotting Candlestick Graph with closing time
