@@ -1,5 +1,5 @@
 # crypto-bot
- Automated Cryptocurrency Trading Bot writtin in python using public libraries such as binance, ccxt, pandas, numpy, mplfinance, matplotlib
+ Automated Cryptocurrency Trading Bot writtin in python using public libraries such as binance, ccxt, pandas, mplfinance, matplotlib
 
 ## Logging into NDAX Exchange
 Using ccxt library to access NDAX exchange.
