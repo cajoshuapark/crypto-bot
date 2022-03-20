@@ -42,9 +42,9 @@ df = df.set_index('Close Time')
 ```
 for i in range(len(df)):
    if df.mav10.iloc[i] > df.mav15.iloc[i] and df.mav10.iloc[i-1] < df.mav15.iloc[i-1]:
-      buy.append(i)
+      ndax.id, ndax.create_market_buy_order(ndaxCryptoName, purchaseAmount)
    elif df.mav10.iloc[i] < df.mav15.iloc[i] and df.mav10.iloc[i-1] > df.mav15.iloc[i-1]:
-      sell.append(i)
+      ndax.id, ndax.create_market_sell_order(ndaxCryptoName, availableCrypto)
 ```
 
 ## Plotting Candlestick Graph with closing time
