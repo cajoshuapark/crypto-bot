@@ -56,6 +56,7 @@ df = df[['Close', 'mav10', 'mav15']]
 ```
 
 ## Buy and Sell Algorithm
+Using moving average algorithm to decide buy and sell
 ```
 #if true, then you can buy, if false, you can sell
 tradeBoolean = True
@@ -75,6 +76,7 @@ The lines in the graph represent the moving averages
 The up arrows represent buy indicators, the down arrows represent sell indicators
 
 ## Automate Crypto Bot
+Using schedule and time libraries to automate cryto bot
 ```
 import schedule
 import time
