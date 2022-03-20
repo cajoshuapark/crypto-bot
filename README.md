@@ -47,6 +47,9 @@ The up arrows represent buy indicators, the down arrows represent sell indicator
 
 ## Automate Crypto Bot
 ```
+import schedule
+import time
+
 def fetchData():
     #trading logic
 
