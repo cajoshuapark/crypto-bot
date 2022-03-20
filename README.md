@@ -2,17 +2,13 @@
  Automated Cryptocurrency Trading Bot writtin in python using public libraries such as binance, ccxt, pandas, mplfinance, matplotlib
 
 ## Logging into NDAX Exchange
-Using ccxt library to access NDAX exchange.
+Using ccxt library to access NDAX exchange using API Key.
 ```
 import ccxt
 
 exchange = ccxt.ndax({
    'apiKey': API_KEY,
    'secret': API_SECRET,
-   'uid': "123456",   
-   'login' : LOGIN,
-   'password' : PASSWORD,
-   'twofa': "123456",
 })
 ```
 ## Fetching Historical OHLC (Open High Low Close) Data
