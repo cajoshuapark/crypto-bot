@@ -43,6 +43,10 @@ df = df.set_index('Close Time')
 #if true, then you can buy, if false, you can sell
 tradeBoolean = True
 exchangeCryptoName = 'MANA/CAD'
+askPrice = ticker['ask']
+availableCad = balance['CAD'].get('free')
+availableCrypto = balance[cryptoName].get('free')
+purchaseAmount = '{0:.3g}'.format(availableCad / askPrice)
 
 if df.mav10.iloc[len(df)-1] > df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] < df.mav15.iloc[len(df)-2] and tradeBoolean == True:
     #buy on exchange
@@ -50,7 +54,6 @@ if df.mav10.iloc[len(df)-1] > df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)
 if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)-2] > df.mav15.iloc[len(df)-2] and tradeBoolean == False:
     #sell on exchange
     exchange.id, exchange.create_market_sell_order(exchangeCryptoName, availableCrypto)
-
 ```
 
 ## Plotting Candlestick Graph with closing time
@@ -75,5 +78,4 @@ schedule.every(12).hours.do(fetchData)
 while True:
    schedule.run_pending()
 ```
-
 
