@@ -107,8 +107,14 @@ while True:
 ```
 ## References
 ccxt: (https://pypi.org/project/ccxt/)
+
 schedule: (https://pypi.org/project/schedule/)
+
 pandas: (https://pypi.org/project/pandas/)
+
 python-binance(https://pypi.org/project/python-binance/)
+
 mplfinance: (https://pypi.org/project/mplfinance/)
+
 matplotlib: (https://pypi.org/project/matplotlib/)
+
