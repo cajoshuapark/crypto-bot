@@ -72,7 +72,7 @@ if df.mav10.iloc[len(df)-1] < df.mav15.iloc[len(df)-1] and df.mav10.iloc[len(df)
 ```
 
 ## Plotting Candlestick Graph with closing time
-The lines in the graph represent the moving averages
+The lines in the graph represent the moving averages\n
 The up arrows represent buy indicators, the down arrows represent sell indicators
 
 ## Automate Crypto Bot
