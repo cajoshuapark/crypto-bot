@@ -62,6 +62,7 @@ import time
 def fetchData():
    #trading logic
 
+#call fetchData depending on time below
 schedule.every(12).hours.do(fetchData)
 
 #continuous data fetching loop
