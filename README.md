@@ -16,8 +16,10 @@ Using python-binance library fetch historical OHLC data.
 ```
 from binance.client import Client
 
+binanceCryptoName = 'BTCUSDT'
+
 client = Client()
-historical = client.get_historical_klines('BTCUSDT', client.KLINE_INTERVAL_1DAY, '1-Oct-2021')
+historical = client.get_historical_klines(binanceCryptoName, client.KLINE_INTERVAL_1DAY, '1-Oct-2021')
 ```
 ## Data Cleaning for Candlestick Graph
 - Adding column names
