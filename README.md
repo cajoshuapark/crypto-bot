@@ -23,10 +23,15 @@ historical = client.get_historical_klines('BTCUSDT', client.KLINE_INTERVAL_1DAY,
 ```
 ## Data Cleaning
 ```
+#adding column names
 df.columns = ['Open Time', 'Open', 'High', 'Low', 'Close', 'Volume','Close Time', 'Quote Asset Volume',
   'Number of Trades', 'TB Base Volume', 'TB Quote Volume', 'Ignore']
-dateTimeColumns = ['Open Time','Close Time']
-df[dateTimeColumns] = pd.to_datetime(df[dateTimeColumns]/1000, unit='s')
+  
+#changing elements in following columns to type **datetime**
+df['Open Time'] = pd.to_datetime(df['Open Time']/1000, unit='s')
+df['Close Time'] = pd.to_datetime(df['Close Time']/1000, unit='s')
+
+#changing elements in following columns to type **float**
 floatColumns = ['Open', 'High', 'Low','Close', 'Volume','Quote Asset Volume', 'TB Base Volume', 'TB Quote Volume']
 df[floatColumns]= df[floatColumns].astype('float64')
 df = df.set_index('Close Time')
