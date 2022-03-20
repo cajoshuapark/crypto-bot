@@ -1,7 +1,7 @@
 # crypto-bot
  Automated Cryptocurrency Trading Bot writtin in python using public libraries such as binance, ccxt, pandas, numpy, mplfinance, matplotlib
 
-## Logging into NDAX exchange
+## Logging into NDAX Exchange
 Using ccxt library to access NDAX exchange.
 ```
 import ccxt
@@ -40,7 +40,7 @@ df[floatColumns]= df[floatColumns].astype('float64')
 #setting index of DataFrame to 'Close Time'
 df = df.set_index('Close Time')
 ```
-## Plotting Candlestick Graph with closing time
+## Plotting Candlestick Graph with Closing Time
 The lines in the graph represent the moving averages.
 ![candlestick](https://user-images.githubusercontent.com/41726552/159150975-c86b4c74-0428-4832-b797-7538cb592210.png)
 
