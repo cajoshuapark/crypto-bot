@@ -1,5 +1,5 @@
 # Crypto-Bot
-Automated Cryptocurrency Trading Bot writtin in Python. Has customizable Candlestick and Buy & Sell Graphs. Updated Mar 20, 2022. 
+Automated Cryptocurrency Trading Bot writtin in Python Inspired by Takashi Kotegawa. Has customizable Candlestick and Buy & Sell Graphs. Updated Mar 20, 2022. 
 
 ## Logging into NDAX Exchange
 Using ccxt library to access NDAX exchange using API Key.
